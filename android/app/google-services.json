@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "302259983672",
+    "project_id": "pocket-depression-test",
+    "storage_bucket": "pocket-depression-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302259983672:android:919a89c1c5ffd0a106ddcd",
+        "android_client_info": {
+          "package_name": "com.imedicalapps.pocketdepressiontest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302259983672-keg8bit99u6dcmuudp53lk08f8iiv5hl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2ZTVoqfkH7fqSrOXfC3pxWUEU4AxqIwo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302259983672-keg8bit99u6dcmuudp53lk08f8iiv5hl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "302259983672-pudc5so5rdeltbf38n4ojr1nil5sjrf2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.imedicalapps.pocketdepressiontest"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

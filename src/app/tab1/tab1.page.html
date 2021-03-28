@@ -1,17 +1,206 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="ion-text-center">
     <ion-title>
-      Tab 1
+      MDI Score
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" >
+  <ion-item class="color11">
+    <ion-text>
+      <p>Major Depression Index (MDI) screens for depression based on clinically significant questions.</p>
+    </ion-text>
+  </ion-item>
+  <ion-item-divider class="color5"></ion-item-divider>
+  <ion-item class="color1">
+    <ion-text>
+      <p>How often have you been bothered by the following over the past 2 weeks?</p>
+    </ion-text>
+  </ion-item>
+  <ion-card class="color1">
+    <ion-card-content>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+      <ion-item class="color11">
+        <ion-text>1. Felt low in spirits or sad?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check1($event)">
+          <ion-select-option value="1">At no time</ion-select-option>
+          <ion-select-option value="2">Some of the time</ion-select-option>
+          <ion-select-option value="3">Slightly less than half of the time</ion-select-option>
+          <ion-select-option value="4">Slightly more than half of the time</ion-select-option>
+          <ion-select-option value="5">Most of the time</ion-select-option>
+          <ion-select-option value="6">All the time</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>2. Lost interest in daily activities?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check2($event)">
+          <ion-select-option value="1">At no time</ion-select-option>
+          <ion-select-option value="2">Some of the time</ion-select-option>
+          <ion-select-option value="3">Slightly less than half of the time</ion-select-option>
+          <ion-select-option value="4">Slightly more than half of the time</ion-select-option>
+          <ion-select-option value="5">Most of the time</ion-select-option>
+          <ion-select-option value="6">All the time</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>3. Felt lacking in energy and strength?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check3($event)">
+          <ion-select-option value="1">At no time</ion-select-option>
+          <ion-select-option value="2">Some of the time</ion-select-option>
+          <ion-select-option value="3">Slightly less than half of the time</ion-select-option>
+          <ion-select-option value="4">Slightly more than half of the time</ion-select-option>
+          <ion-select-option value="5">Most of the time</ion-select-option>
+          <ion-select-option value="6">All the time</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>4. Felt less self-confident?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check4($event)">
+          <ion-select-option value="1">At no time</ion-select-option>
+          <ion-select-option value="2">Some of the time</ion-select-option>
+          <ion-select-option value="3">Slightly less than half of the time</ion-select-option>
+          <ion-select-option value="4">Slightly more than half of the time</ion-select-option>
+          <ion-select-option value="5">Most of the time</ion-select-option>
+          <ion-select-option value="6">All the time</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>5. Had a bad conscience or feelings of guilt?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check5($event)">
+          <ion-select-option value="1">At no time</ion-select-option>
+          <ion-select-option value="2">Some of the time</ion-select-option>
+          <ion-select-option value="3">Slightly less than half of the time</ion-select-option>
+          <ion-select-option value="4">Slightly more than half of the time</ion-select-option>
+          <ion-select-option value="5">Most of the time</ion-select-option>
+          <ion-select-option value="6">All the time</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>6. Felt lacking in energy and strength?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check6($event)">
+          <ion-select-option value="1">At no time</ion-select-option>
+          <ion-select-option value="2">Some of the time</ion-select-option>
+          <ion-select-option value="3">Slightly less than half of the time</ion-select-option>
+          <ion-select-option value="4">Slightly more than half of the time</ion-select-option>
+          <ion-select-option value="5">Most of the time</ion-select-option>
+          <ion-select-option value="6">All the time</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>7. Had difficulty in concentrating, e.g. when reading the newspaper or watching television?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check7($event)">
+          <ion-select-option value="1">At no time</ion-select-option>
+          <ion-select-option value="2">Some of the time</ion-select-option>
+          <ion-select-option value="3">Slightly less than half of the time</ion-select-option>
+          <ion-select-option value="4">Slightly more than half of the time</ion-select-option>
+          <ion-select-option value="5">Most of the time</ion-select-option>
+          <ion-select-option value="6">All the time</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>8a. Felt very restless?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check8a($event)">
+          <ion-select-option value="1">At no time</ion-select-option>
+          <ion-select-option value="2">Some of the time</ion-select-option>
+          <ion-select-option value="3">Slightly less than half of the time</ion-select-option>
+          <ion-select-option value="4">Slightly more than half of the time</ion-select-option>
+          <ion-select-option value="5">Most of the time</ion-select-option>
+          <ion-select-option value="6">All the time</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>8b. Felt subdued or slowed down?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check8b($event)">
+          <ion-select-option value="1">At no time</ion-select-option>
+          <ion-select-option value="2">Some of the time</ion-select-option>
+          <ion-select-option value="3">Slightly less than half of the time</ion-select-option>
+          <ion-select-option value="4">Slightly more than half of the time</ion-select-option>
+          <ion-select-option value="5">Most of the time</ion-select-option>
+          <ion-select-option value="6">All the time</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>9. Had trouble sleeping at night?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check9($event)">
+          <ion-select-option value="1">At no time</ion-select-option>
+          <ion-select-option value="2">Some of the time</ion-select-option>
+          <ion-select-option value="3">Slightly less than half of the time</ion-select-option>
+          <ion-select-option value="4">Slightly more than half of the time</ion-select-option>
+          <ion-select-option value="5">Most of the time</ion-select-option>
+          <ion-select-option value="6">All the time</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>10a. Suffered from reduced appetite?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check10a($event)">
+          <ion-select-option value="1">At no time</ion-select-option>
+          <ion-select-option value="2">Some of the time</ion-select-option>
+          <ion-select-option value="3">Slightly less than half of the time</ion-select-option>
+          <ion-select-option value="4">Slightly more than half of the time</ion-select-option>
+          <ion-select-option value="5">Most of the time</ion-select-option>
+          <ion-select-option value="6">All the time</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>10b. Suffered from increased appetite?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check10b($event)">
+          <ion-select-option value="1">At no time</ion-select-option>
+          <ion-select-option value="2">Some of the time</ion-select-option>
+          <ion-select-option value="3">Slightly less than half of the time</ion-select-option>
+          <ion-select-option value="4">Slightly more than half of the time</ion-select-option>
+          <ion-select-option value="5">Most of the time</ion-select-option>
+          <ion-select-option value="6">All the time</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+</ion-card>
+<ion-card class="color1">
+  <ion-card-content>
+    <ion-item class="color1">
+      <ion-text>Total score: {{ score }} points</ion-text>
+    </ion-item>
+    <ion-item class="color1">
+      <ion-text>Result: {{classification}}</ion-text>
+    </ion-item>
+    <ion-item class="color1">
+    <p><a target="_blank" rel="noopener noreferrer" href="https://pubmed.ncbi.nlm.nih.gov/11578668/">Click here for reference!</a></p>
+  </ion-item>
+  </ion-card-content>
+</ion-card>
 </ion-content>

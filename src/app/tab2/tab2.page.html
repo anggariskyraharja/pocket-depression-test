@@ -1,17 +1,146 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="ion-text-center">
     <ion-title>
-      Tab 2
+      PHQ-9 Score
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" >
+  <ion-item class="color11">
+    <ion-text>
+      <p>Patient Health Questionnaire-9 (PHQ-9) objectifies degree of depression severity.</p>
+    </ion-text>
+  </ion-item>
+  <ion-item-divider class="color5"></ion-item-divider>
+  <ion-item class="color1">
+    <ion-text>
+      <p>How often have you been bothered by the following over the past 2 weeks?</p>
+    </ion-text>
+  </ion-item>
+  <ion-card class="color1">
+    <ion-card-content>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+      <ion-item class="color11">
+        <ion-text>1. Little interest or pleasure in doing things?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check1($event)">
+          <ion-select-option value="1">Not at all</ion-select-option>
+          <ion-select-option value="2">Several days</ion-select-option>
+          <ion-select-option value="3">More than half the days</ion-select-option>
+          <ion-select-option value="4">Nearly every day</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>2. Feeling down, depressed, or hopeless?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check2($event)">
+          <ion-select-option value="1">Not at all</ion-select-option>
+          <ion-select-option value="2">Several days</ion-select-option>
+          <ion-select-option value="3">More than half the days</ion-select-option>
+          <ion-select-option value="4">Nearly every day</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>3. Trouble falling or staying asleep, or sleeping too much?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check3($event)">
+          <ion-select-option value="1">Not at all</ion-select-option>
+          <ion-select-option value="2">Several days</ion-select-option>
+          <ion-select-option value="3">More than half the days</ion-select-option>
+          <ion-select-option value="4">Nearly every day</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>4. Feeling tired or having little energy?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check4($event)">
+          <ion-select-option value="1">Not at all</ion-select-option>
+          <ion-select-option value="2">Several days</ion-select-option>
+          <ion-select-option value="3">More than half the days</ion-select-option>
+          <ion-select-option value="4">Nearly every day</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>5. Poor appetite or overeating?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check5($event)">
+          <ion-select-option value="1">Not at all</ion-select-option>
+          <ion-select-option value="2">Several days</ion-select-option>
+          <ion-select-option value="3">More than half the days</ion-select-option>
+          <ion-select-option value="4">Nearly every day</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>6. Feeling bad about yourself — or that you are a failure or have let yourself or your family down?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check6($event)">
+          <ion-select-option value="1">Not at all</ion-select-option>
+          <ion-select-option value="2">Several days</ion-select-option>
+          <ion-select-option value="3">More than half the days</ion-select-option>
+          <ion-select-option value="4">Nearly every day</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>7. Trouble concentrating on things, such as reading the newspaper or watching television?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check7($event)">
+          <ion-select-option value="1">Not at all</ion-select-option>
+          <ion-select-option value="2">Several days</ion-select-option>
+          <ion-select-option value="3">More than half the days</ion-select-option>
+          <ion-select-option value="4">Nearly every day</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>8. Moving or speaking so slowly that other people could have noticed? Or so fidgety or restless that you have been moving a lot more than usual?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check8($event)">
+          <ion-select-option value="1">Not at all</ion-select-option>
+          <ion-select-option value="2">Several days</ion-select-option>
+          <ion-select-option value="3">More than half the days</ion-select-option>
+          <ion-select-option value="4">Nearly every day</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>9. Thoughts that you would be better off dead, or thoughts of hurting yourself in some way?</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check9($event)">
+          <ion-select-option value="1">Not at all</ion-select-option>
+          <ion-select-option value="2">Several days</ion-select-option>
+          <ion-select-option value="3">More than half the days</ion-select-option>
+          <ion-select-option value="4">Nearly every day</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+</ion-card>
+<ion-card class="color1">
+  <ion-card-content>
+    <ion-item class="color1">
+      <ion-text>Total score: {{ score }} points</ion-text>
+    </ion-item>
+    <ion-item class="color1">
+      <ion-text>Result: {{classification}}</ion-text>
+    </ion-item>
+    <ion-item class="color1">
+      <p><a target="_blank" rel="noopener noreferrer" href="https://pubmed.ncbi.nlm.nih.gov/11556941/">Click here for reference!</a></p>
+    </ion-item>
+    </ion-card-content>
+</ion-card>
 </ion-content>

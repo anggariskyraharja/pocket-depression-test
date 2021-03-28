@@ -1,17 +1,241 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="ion-text-center">
     <ion-title>
-      Tab 3
+      QIDS Score
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content [fullscreen]="true" >
+  <ion-item class="color11">
+    <ion-text>
+      <p>Quick Inventory of Depressive Symptomatology (QIDS) rates depression symptoms via self-assessment.</p>
+    </ion-text>
+  </ion-item>
+  <ion-card class="color1">
+    <ion-card-content>
+      <ion-item-divider class="color111">Sleep</ion-item-divider>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>1. Sleep onset insomnia:</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check1($event)">
+          <ion-select-option value="1">Never takes longer than 30 minutes to fall asleep.</ion-select-option>
+          <ion-select-option value="2">Takes at least 30 minutes to fall asleep, less than half the time.</ion-select-option>
+          <ion-select-option value="3">Takes at least 30 minutes to fall asleep, more than half the time.</ion-select-option>
+          <ion-select-option value="4">Takes more than 60 minutes to fall asleep, more than half the time.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>2. Mid-nocturnal insomnia:</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check2($event)">
+          <ion-select-option value="1">Does not wake up at night.</ion-select-option>
+          <ion-select-option value="2">Restless, light sleep with few awakenings.</ion-select-option>
+          <ion-select-option value="3">Wakes up at least once a night, but goes back to sleep easily.</ion-select-option>
+          <ion-select-option value="4">Awakens more than once a night and stays awake for 20 minutes or more, more than half the time.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>3. Early morning insomnia:</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check3($event)">
+          <ion-select-option value="1">Less than half the time, awakens no more than 30 minutes before necessary.</ion-select-option>
+          <ion-select-option value="2">More than half the time, awakens more than 30 minutes before need be.</ion-select-option>
+          <ion-select-option value="3">Awakens at least one hour before need be, more than half the time.</ion-select-option>
+          <ion-select-option value="4">Awakens at least two hours before need be, more than half the time.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>4. Hypersomnia:</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check4($event)">
+          <ion-select-option value="1">Sleeps no longer than 7-8 hours/night, without naps.</ion-select-option>
+          <ion-select-option value="2">Sleeps no longer than 10 hours in a 24 hour period (including naps).</ion-select-option>
+          <ion-select-option value="3">Sleeps no longer than 12 hours in a 24 hour period (including naps).</ion-select-option>
+          <ion-select-option value="4">Sleeps longer than 12 hours in a 24 hour period (including naps).</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item-divider class="color111">Mood</ion-item-divider>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>5. Mood (sad):</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check5($event)">
+          <ion-select-option value="1">Does not feel sad.</ion-select-option>
+          <ion-select-option value="2">Feels sad less than half the time.</ion-select-option>
+          <ion-select-option value="3">Feels sad more than half the time.</ion-select-option>
+          <ion-select-option value="4">Feels intensely sad virtually all the time.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item-divider class="color111">Weight</ion-item-divider>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>6. Appetite (decreased):</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check6($event)">
+          <ion-select-option value="1">No change from usual appetite.</ion-select-option>
+          <ion-select-option value="2">Eats somewhat less often and/or lesser amounts than usual.</ion-select-option>
+          <ion-select-option value="3">Eats much less than usual and only with personal effort.</ion-select-option>
+          <ion-select-option value="4">Eats rarely within a 24-hour period, and only with extreme personal effort or with persuasion by others.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>7. Appetite (increased):</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check7($event)">
+          <ion-select-option value="1">No change from usual appetite.</ion-select-option>
+          <ion-select-option value="2">More frequently feels a need to eat than usual.</ion-select-option>
+          <ion-select-option value="3">Regularly eats more often and/or greater amounts than usual.</ion-select-option>
+          <ion-select-option value="4">Feels driven to overeat at and between meals.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>8. Weight (decrease) within the last two weeks:</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check8($event)">
+          <ion-select-option value="1">Has experienced no weight change.</ion-select-option>
+          <ion-select-option value="2">Feels as if some slight weight loss occurred.</ion-select-option>
+          <ion-select-option value="3">Has lost 2 pounds or more.</ion-select-option>
+          <ion-select-option value="4">Has lost 5 pounds or more.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>9. Weight (increase) within the last two weeks:</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check9($event)">
+          <ion-select-option value="1">Has experienced no weight change.</ion-select-option>
+          <ion-select-option value="2">Feels as if some slight weight gain has occurred.</ion-select-option>
+          <ion-select-option value="3">Has gained 2 pounds or more.</ion-select-option>
+          <ion-select-option value="4">Has gained 5 pounds or more.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item-divider class="color111">Concentration</ion-item-divider>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>10. Concentration/decision making:</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check10($event)">
+          <ion-select-option value="1">No change in usual capacity to concentrate and decide.</ion-select-option>
+          <ion-select-option value="2">Occasionally feels indecisive or notes that attention often wanders.</ion-select-option>
+          <ion-select-option value="3">Most of the time struggles to focus attention or make decisions.</ion-select-option>
+          <ion-select-option value="4">Cannot concentrate well enough to read or cannot make even minor decisions.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item-divider class="color111">Guilt</ion-item-divider>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>11. Outlook (self):</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check11($event)">
+          <ion-select-option value="1">Sees self as equally worthwhile and deserving as others.</ion-select-option>
+          <ion-select-option value="2">Is more self-blaming than usual.</ion-select-option>
+          <ion-select-option value="3">Largely believes that he/she causes problems for others.</ion-select-option>
+          <ion-select-option value="4">Ruminates over major and minor defects in self.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item-divider class="color111">Suicidal Ideation</ion-item-divider>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>12. Suicidal ideation:</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check12($event)">
+          <ion-select-option value="1">Does not think of suicide or death.</ion-select-option>
+          <ion-select-option value="2">Feels life is empty or is not worth living.</ion-select-option>
+          <ion-select-option value="3">Thinks of suicide/death several times a week for several minutes.</ion-select-option>
+          <ion-select-option value="4">Thinks of suicide/death several times a day in depth, or has made specific plans to commit or attempted suicide.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item-divider class="color111">Interest</ion-item-divider>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>13. Involvement:</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check13($event)">
+          <ion-select-option value="1">No change from usual level of interest in other people and activities.</ion-select-option>
+          <ion-select-option value="2">Notices a reduction in former interests/activities.</ion-select-option>
+          <ion-select-option value="3">Finds only one or two former interests remain.</ion-select-option>
+          <ion-select-option value="4">Has virtually no interest in formerly pursued activities.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item-divider class="color111">Fatigue</ion-item-divider>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>14. Energy/fatigability:</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check14($event)">
+          <ion-select-option value="1">No change in usual level of energy.</ion-select-option>
+          <ion-select-option value="2">Tires more easily than usual.</ion-select-option>
+          <ion-select-option value="3">Makes significant personal effort to initiate or maintain usual daily activities.</ion-select-option>
+          <ion-select-option value="4">Unable to carry out most of usual daily activities due to lack of energy.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item-divider class="color111">Psychomotor Changes</ion-item-divider>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>15. Psychomotor slowing:</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check15($event)">
+          <ion-select-option value="1">Normal speed of thinking, gesturing, and speaking.</ion-select-option>
+          <ion-select-option value="2">Notes slowed thinking, and voice modulation is reduced.</ion-select-option>
+          <ion-select-option value="3">Takes several seconds to respond to most questions; reports slowed thinking.</ion-select-option>
+          <ion-select-option value="4">Is largely unresponsive to most questions without strong encouragement.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item-divider class="color1"></ion-item-divider>
+      <ion-item class="color11">
+        <ion-text>16. Psychomotor agitation:</ion-text>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-select value="1" (ionChange)="check16($event)">
+          <ion-select-option value="1">No increased speed or disorganization in thinking or gesturing.</ion-select-option>
+          <ion-select-option value="2">Fidgets, wrings hands, and shifts positions often.</ion-select-option>
+          <ion-select-option value="3">Describes impulse to move about and displays motor restlessness.</ion-select-option>
+          <ion-select-option value="4">Unable to stay seated; paces about with or without permission.</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+</ion-card>
+<ion-card class="color1">
+  <ion-card-content>
+    <ion-item class="color1">
+      <ion-text>Total score: {{ score }} points</ion-text>
+    </ion-item>
+    <ion-item class="color1">
+      <ion-text>Result: {{classification}}</ion-text>
+    </ion-item>
+    <ion-item class="color1">
+      <p><a target="_blank" rel="noopener noreferrer" href="https://pubmed.ncbi.nlm.nih.gov/3737788/">Click here for reference!</a></p>
+    </ion-item>
+    </ion-card-content>
+</ion-card>
 </ion-content>
